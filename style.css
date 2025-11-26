@@ -1,0 +1,98 @@
+:root{
+             /* ==== Text ====== */
+
+    --Purple-300 : hsl(276, 100%, 81%);
+    --Purple-600 : hsl(276, 55%, 52%);
+    --Gray-500 : hsl(270, 7%, 64%);
+    --Gray-300 : hsl(206, 6%, 79%);
+    --Purple-950 : hsl(271, 36%, 24%);
+
+            /* ==== gradient ====== */
+
+    --Pink-500: hsl(293, 100%, 63%);
+    --Purple-500: hsl(264, 100%, 61%);
+    
+            /* ==== Secondary =====*/
+
+    --White: hsl(0, 100%, 100%);
+    --Gray-100 : hsl(270, 20%, 96%);
+    --Purple-950 : hsl(271, 36%, 24%);
+    --Pink-400 : hsl(289, 100%, 72%);
+}
+
+*,
+*::before,
+*::after{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+        /*====CSS Reset ======= */
+
+input {
+  /* -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; */
+  background: none;
+  border: none; 
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  outline: none; 
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+        /* ===== General ====== */
+
+body{
+    font-family: 'Rubik',sans-serif;
+    background-color: var(--Gray-100);
+}
+
+.app{
+    width: 300px;
+    background-color: aqua;
+    margin: 5em;
+    border: 10px solid var(--White);
+}
+
+.app-header{
+    background-image: linear-gradient( var(--Pink-500),var(--Purple-500));
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3em;
+    padding-bottom: 1em;
+    border-radius: 1.5rem 1.5rem 0.5rem 0.5rem;
+}
+
+.shape{
+    position: absolute;
+}
+
+.avatar{
+    display: flex; 
+    align-items: center;
+}
+
+.avatar-name>:nth-child(1){
+    font-weight: 500;
+    color: var(--White);
+    font-size: 13px;
+}
+.avatar-name>:nth-child(2){
+    font-size: 10px;
+    color: var(--Purple-300);
+}
+
+.avatar>img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid var(--Gray-100);
+    margin-right: 0.5em;
+}
