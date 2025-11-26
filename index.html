@@ -2,50 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"> 
+  <title>Frontend Mentor | Chat App CSS Illustration </title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  Samuel Green
-  Available to Walk
-
-  That sounds great. I’d be happy with that.
-
-  Could you send over some pictures of your dog, please?
-
-  Here are a few pictures. She’s a happy girl!
-
-  Can you make it?
-
-  She looks so happy! The time we discussed works. How long shall I take her out for?
-
-  30 minute walk
-  $29
-
-  1 hour walk
-  $49
-
-  Type a message…
-
-  Simple booking
-
-  Stay in touch with our dog walkers through the chat interface. This makes it easy to 
+  <main class="main">
+    <div class="app">
+      <div class="app-header">
+        <div class="shape"></div>
+        <div class="avatar">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="#fff" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" /></svg>
+          <img src="./images/avatar.jpg" alt="avatar">
+          <div class="avatar-name">
+            <p>Samuel Green</p>
+            <p>Available to Walk</p>
+          </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="#fff" d="M12,16A2,2 0 0,1 14,18A2,2 0 0,1 12,20A2,2 0 0,1 10,18A2,2 0 0,1 12,16M12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12A2,2 0 0,1 12,10M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4Z" /></svg>
+      </div>
+      <div class="app-body">
+        <p>That sounds great. I’d be happy with that.</p>
+        <p>Could you send over some pictures of your dog, please?</p>
+        <div class="img">
+          <img src="./images/dog-image-1.jpg" alt="dog-image-1">
+          <img src="./images/dog-image-2.jpg" alt="dog-image-2">
+          <img src="./images/dog-image-3.jpg" alt="dog-image-3">
+        </div>
+        <p>Here are a few pictures. She’s a happy girl!</p>
+        <p>Can you make it?</p>
+        <p>She looks so happy! The time we discussed works. How long shall I take her out for?</p>
+        <div class="price">
+          <div class="input">
+            <input id="price-1" type="radio" name="price">
+            <label for="price-1">30 minute walk</label>
+          </div>
+          <span class="dollar">$29</span>
+        </div>
+        <div class="price">
+          <div class="input">
+            <input id="price-2" type="radio" name="price">
+            <label for="price-2">1 hour walk</label>
+          </div>
+          <span class="dollar">$49</span>
+        </div>
+        <div class="submit">
+          <input type="text" name="submit" placeholder="Type a message…">
+          <div class="submit-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="#fff" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text">
+      <h1>Simple booking</h1>
+      <p>Stay in touch with our dog walkers through the chat interface. This makes it easy to 
   discuss arrangements and make bookings. Once the walk has been completed you can rate 
-  your walker and book again all through the chat.
-  
-  <div class="attribution">
+  your walker and book again all through the chat.</p>
+    </div>
+  </main>  
+   <div class="bg"></div>
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    Coded by <a href="#">Kenaw Marie</a>.
+  </div> -->
 </body>
 </html>
