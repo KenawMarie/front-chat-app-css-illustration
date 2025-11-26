@@ -6,15 +6,17 @@
     --Gray-500 : hsl(270, 7%, 64%);
     --Gray-300 : hsl(206, 6%, 79%);
     --Purple-950 : hsl(271, 36%, 24%);
-
-            /* ==== gradient ====== */
-
+    
+    /* ==== gradient ====== */
+    
     --Pink-500: hsl(293, 100%, 63%);
     --Purple-500: hsl(264, 100%, 61%);
     
-            /* ==== Secondary =====*/
-
+    /* ==== Secondary =====*/
+    
     --White: hsl(0, 100%, 100%);
+    --Purple-600-light: hsla(276, 55%, 52%, 0.123);
+    --Gray-300-light : hsla(206, 7%, 79%, 0.411);
     --Gray-100 : hsl(270, 20%, 96%);
     --Purple-950 : hsl(271, 36%, 24%);
     --Pink-400 : hsl(289, 100%, 72%);
@@ -31,9 +33,9 @@
         /*====CSS Reset ======= */
 
 input {
-  /* -webkit-appearance: none;
+  -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none; */
+  appearance: none;
   background: none;
   border: none; 
   font-family: inherit;
@@ -55,8 +57,7 @@ body{
 }
 
 .app{
-    width: 300px;
-    background-color: aqua;
+    width: 300px; 
     margin: 5em;
     border: 10px solid var(--White);
 }
@@ -95,4 +96,50 @@ body{
     border-radius: 50%;
     border: 2px solid var(--Gray-100);
     margin-right: 0.5em;
+}
+
+.app-body{
+    background-color: var(--Gray-100);
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    gap: 1rem;
+    margin: 1.5em 1em;
+}
+
+.left{
+    width: 60%;
+    background-color: var(--Purple-600-light);
+    color: var(--Purple-600);
+    padding: 1em 1.8em 1em 1em;
+    border-radius: 8px;
+}
+
+.img{
+    display: flex;
+    align-self: flex-end;
+    gap: 0.6rem;
+}
+
+.img img{
+    width: 50px;
+    border-radius: 10px;
+}
+
+.right{
+    width: 65%;
+    background-color: var(--White);
+    color:var(--Gray-500);
+    align-self: flex-end;
+    padding: 1em 1.8em 1em 1em;
+    border-radius: 8px 8px 4px 8px;
+    box-shadow: 0px 5px 10px 0px var(--Gray-300);
+}
+
+.price{
+    width: 70%;
+    background-image: linear-gradient(90deg,var(--Purple-500),var(--Pink-500));
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
 }
