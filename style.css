@@ -15,11 +15,11 @@
     /* ==== Secondary =====*/
     
     --White: hsl(0, 100%, 100%);
-    --Purple-600-light: hsla(276, 55%, 52%, 0.123);
-    --Gray-300-light : hsla(206, 7%, 79%, 0.411);
+    --Purple-600-light: hsla(276, 55%, 52%, 0.123); 
     --Gray-100 : hsl(270, 20%, 96%);
     --Purple-950 : hsl(271, 36%, 24%);
     --Pink-400 : hsl(289, 100%, 72%);
+    --orange:hsl(39, 100%, 50%);
 }
 
 *,
@@ -32,19 +32,20 @@
 
         /*====CSS Reset ======= */
 
-input {
+input,
+button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: none;
   border: none; 
   font-family: inherit;
-  font-size: inherit;
-  color: inherit;
+  font-size: inherit; 
+  background: none;
   outline: none; 
 }
+ 
 
-img{
+img,svg{
     display: block;
     width: 100%;
 }
@@ -56,23 +57,41 @@ body{
     background-color: var(--Gray-100);
 }
 
+.main{
+    display: flex;
+}
+
+.app-cover{ 
+    border: 1px solid var(--Gray-300);
+    border-radius: 2.5rem;
+    background-color: var(--White);
+}
+
 .app{
     width: 300px; 
-    margin: 5em;
-    border: 10px solid var(--White);
+    margin: 0.8em;
+    border: 1px solid var(--Gray-300);
+    border-radius: 2rem;
 }
 
 .app-header{
     background-image: linear-gradient( var(--Pink-500),var(--Purple-500));
     display: flex;
     justify-content: space-between;
-    padding-top: 3em;
+    padding-top: 2.5em;
     padding-bottom: 1em;
-    border-radius: 1.5rem 1.5rem 0.5rem 0.5rem;
+    border-radius: 2rem 2rem 0.5rem 0.5rem;
+    position: relative;
 }
 
 .shape{
+    background-color: var(--White);
+    width: 180px;
+    height: 40px;
     position: absolute;
+    top: -0.8rem;
+    left: 20%;
+    border-radius: 18px;
 }
 
 .avatar{
@@ -98,13 +117,18 @@ body{
     margin-right: 0.5em;
 }
 
+.app-header svg{
+    width: 24px;
+}
+
 .app-body{
     background-color: var(--Gray-100);
     display: flex;
     flex-direction: column;
     font-size: 10px;
     gap: 1rem;
-    margin: 1.5em 1em;
+    padding: 2em 1em;
+    border-radius:0 0 2rem 2rem;
 }
 
 .left{
@@ -127,7 +151,7 @@ body{
 }
 
 .right{
-    width: 65%;
+    width: 62%;
     background-color: var(--White);
     color:var(--Gray-500);
     align-self: flex-end;
@@ -136,10 +160,86 @@ body{
     box-shadow: 0px 5px 10px 0px var(--Gray-300);
 }
 
+.app-body p:nth-of-type(4){
+    width:max-content ;
+    border-radius:20px 8px 8px 20px ;
+}
+
+
 .price{
     width: 70%;
     background-image: linear-gradient(90deg,var(--Purple-500),var(--Pink-500));
     display: flex;
     justify-content: space-between;
     align-items: center; 
+    padding: 1.3em;
+    border-radius: 8px 8px 8px 4px;
+}
+
+.input{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    color: var(--Gray-100);
+}
+
+.dollar{
+    color: var(--White);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+input[type="radio"] {  
+  background-color: transparent;  
+  font: inherit;
+  color: currentColor;
+  width: 1.5em;
+  height: 1.5em;
+  border: 0.15em solid var(--Pink-400);
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--orange);
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+
+.submit{
+    display: flex;
+}
+
+input[type="text"]{
+    width: 100%;
+    height: 45px;
+    background-color: var(--White);
+    border: 1px solid var(--Gray-300);
+    border-radius: 40px;
+    padding: 2em;
+}
+
+.submit-btn{
+    background-color: var(--Purple-950);
+    align-self: center;
+    margin-left: -4em;
+    width: 30px; 
+    height: 30px;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+}
+
+input::placeholder{
+    color: var(--Gray-300);
 }
