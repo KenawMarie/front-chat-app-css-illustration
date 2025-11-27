@@ -64,6 +64,7 @@ body{
     justify-content: space-around;
     align-items: center;
     padding: 10em 0;
+    gap:3rem;
 }
 
 .app-cover{ 
@@ -220,6 +221,11 @@ input[type="radio"]:checked::before {
   transform: scale(1);
 }
 
+input[type="radio"]:focus {
+  outline: max(2px, 0.15em) solid var(--Pink-400);
+  outline-offset: max(2px, 0.15em);
+}
+
 .submit{
     display: flex;
 }
@@ -256,7 +262,7 @@ input::placeholder{
 
 .text h1{
     color: var(--Purple-950);
-    padding-bottom: 1em;
+    padding-bottom: 0.3em;
     font-weight: 700;
     font-size: 3rem;
 }
@@ -268,12 +274,41 @@ input::placeholder{
 }
 
 .purple-bg{
-    width: 27%;
+    width: 400px;
     height: 1093px;
     background-color: var(--Purple-500);
     position: absolute;
     top: -13rem;
     left: -3rem;
     z-index: -1;
-    border-radius:300px/250px;
+    border-radius:50%/250px;
+}
+
+@media screen and (max-width:48rem) {
+    .main{
+        width: 85%;
+        flex-direction: column;
+        padding: 5em 0;
+        margin: 0 auto;
+    }
+
+    .text{
+        width: 100%; 
+    }
+
+    .text h1{
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    .text p{
+        font-size: 1rem;
+    }
+
+    .purple-bg{
+        width: 350px;
+        height: 850px;
+        left: -8rem;
+        border-radius: 300px/200px;
+    }
 }
