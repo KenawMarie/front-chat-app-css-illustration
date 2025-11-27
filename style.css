@@ -58,7 +58,12 @@ body{
 }
 
 .main{
+    width: 80%; 
+    margin: 0 auto;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10em 0;
 }
 
 .app-cover{ 
@@ -242,4 +247,33 @@ input[type="text"]{
 
 input::placeholder{
     color: var(--Gray-300);
+}
+
+
+.text{
+    width: 47%;
+}
+
+.text h1{
+    color: var(--Purple-950);
+    padding-bottom: 1em;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.text p{
+    color: var(--Gray-500);
+    line-height: 1.8; 
+    font-size: 1.2rem;
+}
+
+.purple-bg{
+    width: 27%;
+    height: 1093px;
+    background-color: var(--Purple-500);
+    position: absolute;
+    top: -13rem;
+    left: -3rem;
+    z-index: -1;
+    border-radius:300px/250px;
 }
